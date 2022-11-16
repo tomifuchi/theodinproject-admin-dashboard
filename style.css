@@ -356,17 +356,8 @@ body {
   min-height: 100vh;
 }
 
-main {
-  align-self: start;
-}
-
 header {
   grid-area: header;
-  box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.3);
-}
-
-section h2 {
-  margin: 5px 0;
 }
 
 section.query-profile {
@@ -376,7 +367,7 @@ section.query-profile {
   align-items: center;
   gap: 40px;
   grid-template-columns: 1fr auto auto;
-  padding: 10px;
+  padding: 10px 20px;
 }
 
 .search-bar {
@@ -396,6 +387,10 @@ section.query-profile {
   background-color: #f1f5f9;
 }
 
+.notification i:hover {
+  cursor: pointer;
+}
+
 .user-profile {
   display: grid;
   grid-template-columns: none;
@@ -408,6 +403,9 @@ section.query-profile {
   width: 60px;
   height: 60px;
   border-radius: 30px;
+}
+.user-profile-avatar:hover {
+  cursor: pointer;
 }
 
 .welcome-action {
@@ -429,9 +427,18 @@ section.query-profile {
 }
 .welcome-action .welcome .greeting-user h2 {
   font-size: 0.9rem;
+  font-weight: 400;
 }
 .welcome-action .welcome .greeting-user h3 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
+}
+.welcome-action .action {
+  justify-self: end;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: none;
+  grid-auto-flow: column;
+  gap: 15px;
 }
 .welcome-action button {
   border: none;
@@ -439,14 +446,10 @@ section.query-profile {
   color: #f8fafc;
   border-radius: 30px;
   padding: 10px 20px;
+  cursor: pointer;
 }
-.welcome-action .action {
-  display: grid;
-  grid-template-columns: none;
-  grid-template-rows: none;
-  grid-auto-flow: column;
-  justify-content: center;
-  gap: 20px;
+.welcome-action button:hover {
+  opacity: 0.8;
 }
 
 nav {
@@ -494,12 +497,18 @@ main {
   grid-template-rows: none;
   grid-auto-rows: minmax(250px, auto);
   grid-template-areas: "user-project announcement" "user-project trending-user";
+  align-content: start;
   gap: 15px;
 }
 
 main {
   background-color: #f1f5f9;
-  padding: 17px;
+  padding: 20px;
+}
+main h2 {
+  margin: 5px 0;
+  font-size: 1.3rem;
+  font-weight: 500;
 }
 
 .user-project {
@@ -508,9 +517,12 @@ main {
 
 .user-project-list {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-template-rows: none;
-  gap: 17px;
+  gap: 30px;
+}
+.user-project-list li {
+  display: contents;
 }
 .user-project-list .user-project-item {
   background-color: white;
@@ -560,6 +572,10 @@ main {
 .trending-user {
   grid-area: trending-user;
 }
+.trending-user h3, .trending-user h4 {
+  font-weight: 400;
+  font-size: 1rem;
+}
 .trending-user-list {
   display: grid;
   grid-template-columns: none;
@@ -567,6 +583,7 @@ main {
   grid-auto-flow: row;
   gap: 15px;
   justify-content: center;
+  align-content: center;
   background-color: white;
   border-radius: 10px;
   padding: 25px;
@@ -580,7 +597,10 @@ main {
   grid-template-rows: none;
   grid-auto-flow: column;
   justify-content: start;
-  gap: 30px;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid #d4d4d4;
+  padding: 10px 0;
 }
 
 /*# sourceMappingURL=style.css.map */
