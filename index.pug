@@ -1,0 +1,189 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Admin dashboard 
+        link(rel="stylesheet", href="style.css")
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css")
+    body 
+
+        //- The nav naturally flows anywhere it needed to be 
+        nav
+          a(href="#") 
+            h2 <i class="fa-regular fa-paper-plane"></i> Dashboard
+          ul.general
+            li 
+              a(href="#") <i class="fa-solid fa-house"></i> Home 
+            li 
+              a(href="#") <i class="fa-regular fa-address-card"></i> Profile 
+            li 
+              a(href="#") <i class="fa-solid fa-message"></i> Messages 
+            li 
+              a(href="#") <i class="fa-solid fa-clock-rotate-left"></i> History
+            li 
+              a(href="#") <i class="fa-solid fa-list-check"></i> Tasks
+            li 
+              a(href="#") <i class="fa-solid fa-people-group"></i> Communities
+          ul.settings
+            li 
+              a(href="#") <i class="fa-solid fa-gear"></i> Settings
+            li 
+              a(href="#") <i class="fa-solid fa-circle-question"></i>  Supports
+            li 
+              a(href="#") <i class="fa-solid fa-lock"></i> Privacy
+
+        header 
+          section.query-profile
+            .search-bar
+              <i class="fa-solid fa-magnifying-glass fa-xl"></i>
+              input(type="text", name="", placeholder="Search...")
+            .notification
+              <i class="fa-solid fa-bell fa-lg"></i>
+            .user-profile
+              .user-profile-avatar
+                img(src="./images/doge_avatar.jpg", alt="", srcset="")
+              p Morgan Oakley
+          section.welcome-action
+            .welcome
+              .user-profile-avatar 
+                img(src="./images/doge_avatar.jpg", alt="", srcset="")
+              .greeting-user
+                h2 Hi there,
+                h3 Morgan Oakley(@morgan)
+            .action
+              button New 
+              button Upload
+              button Share
+
+        main
+          section.user-project
+            h2 Your projects
+            ul.user-project-list
+              li 
+                .user-project-item
+                  .user-project-item-content
+                   h2 Title of the project goes here
+                   p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus ratione dolore eligendi maiores sapiente similique sint libero, eos sed. Libero doloremque est quis reiciendis possimus sunt nobis quia ratione sapiente!
+                  .user-project-item-action
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-solid fa-share-from-square"></i>
+              li 
+                .user-project-item
+                  .user-project-item-content
+                   h2 Title of the project goes here
+                   p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus ratione dolore eligendi maiores sapiente similique sint libero, eos sed. Libero doloremque est quis reiciendis possimus sunt nobis quia ratione sapiente!
+                  .user-project-item-action
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-solid fa-share-from-square"></i>
+              li 
+                .user-project-item
+                  .user-project-item-content
+                   h2 Title of the project goes here
+                   p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus ratione dolore eligendi maiores sapiente similique sint libero, eos sed. Libero doloremque est quis reiciendis possimus sunt nobis quia ratione sapiente!
+                  .user-project-item-action
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-solid fa-share-from-square"></i>
+              li 
+               .user-project-item
+                 .user-project-item-content
+                  h2 Title of the project goes here
+                  p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus ratione dolore eligendi maiores sapiente similique sint libero, eos sed. Libero doloremque est quis reiciendis possimus sunt nobis quia ratione sapiente!
+                 .user-project-item-action
+                   <i class="fa-regular fa-star"></i>
+                   <i class="fa-solid fa-share-from-square"></i>
+               li 
+                .user-project-item
+                  .user-project-item-content
+                   h2 Title of the project goes here
+                   p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus ratione dolore eligendi maiores sapiente similique sint libero, eos sed. Libero doloremque est quis reiciendis possimus sunt nobis quia ratione sapiente!
+                  .user-project-item-action
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-solid fa-share-from-square"></i>
+              li 
+               .user-project-item
+                 .user-project-item-content
+                  h2 Title of the project goes here
+                  p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus ratione dolore eligendi maiores sapiente similique sint libero, eos sed. Libero doloremque est quis reiciendis possimus sunt nobis quia ratione sapiente!
+                 .user-project-item-action
+                   <i class="fa-regular fa-star"></i>
+                   <i class="fa-solid fa-share-from-square"></i>
+               li 
+                .user-project-item
+                  .user-project-item-content
+                   h2 Title of the project goes here
+                   p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus ratione dolore eligendi maiores sapiente similique sint libero, eos sed. Libero doloremque est quis reiciendis possimus sunt nobis quia ratione sapiente!
+                  .user-project-item-action
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-solid fa-share-from-square"></i>
+              li 
+               .user-project-item
+                 .user-project-item-content
+                  h2 Title of the project goes here
+                  p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus ratione dolore eligendi maiores sapiente similique sint libero, eos sed. Libero doloremque est quis reiciendis possimus sunt nobis quia ratione sapiente!
+                 .user-project-item-action
+                   <i class="fa-regular fa-star"></i>
+                   <i class="fa-solid fa-share-from-square"></i>
+          section.announcement
+            h2 Announcements
+            ul.announcement-list
+              li 
+                a(href="#")
+                  .announcement-item
+                    h2 Title of the announcement
+                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure inventore veritatis, enim tempora possimus vel, culpa recusandae aliquid ab earum debitis nulla! Ad fuga corporis iusto eaque quos velit culpa!
+              li 
+                a(href="#")
+                  .announcement-item
+                    h2 Title of the announcement
+                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure inventore veritatis, enim tempora possimus vel, culpa recusandae aliquid ab earum debitis nulla! Ad fuga corporis iusto eaque quos velit culpa!
+              li 
+                a(href="#")
+                  .announcement-item
+                    h2 Title of the announcement
+                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure inventore veritatis, enim tempora possimus vel, culpa recusandae aliquid ab earum debitis nulla! Ad fuga corporis iusto eaque quos velit culpa!
+              li 
+                a(href="#")
+                  .announcement-item
+                    h2 Title of the announcement
+                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure inventore veritatis, enim tempora possimus vel, culpa recusandae aliquid ab earum debitis nulla! Ad fuga corporis iusto eaque quos velit culpa!
+
+
+
+
+          section.trending-user
+            h2 Trending
+            ul.trending-user-list 
+              li 
+                a(href="#")
+                  .trending-user-item
+                    .user-profile-avatar 
+                      img(src="./images/doge_avatar.jpg", alt="", srcset="")
+                    .trending-user-profile-info 
+                      h3 @Someone 
+                      h4 Nicknamegoeshere
+              li 
+                a(href="#")
+                  .trending-user-item
+                    .user-profile-avatar 
+                      img(src="./images/doge_avatar.jpg", alt="", srcset="")
+                    .trending-user-profile-info 
+                      h3 @Someone 
+                      h4 Nicknamegoeshere
+              li 
+                a(href="#")
+                  .trending-user-item
+                    .user-profile-avatar 
+                      img(src="./images/doge_avatar.jpg", alt="", srcset="")
+                    .trending-user-profile-info 
+                      h3 @Someone 
+                      h4 Nicknamegoeshere
+              li 
+                a(href="#")
+                  .trending-user-item
+                    .user-profile-avatar 
+                      img(src="./images/doge_avatar.jpg", alt="", srcset="")
+                    .trending-user-profile-info 
+                      h3 @Someone 
+                      h4 Nicknamegoeshere

@@ -1,0 +1,241 @@
+@import '../../scss_base/starter';
+@import 'base';
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+
+    @include grid($column: minmax(250px, 0.5fr) repeat(3,1fr), $row: auto 3fr);
+    grid-template-areas: 
+        "nav header header header"
+        "nav main main main"
+    ;
+    min-height: 100vh;
+}
+main {
+    align-self: start;
+}
+
+
+
+header {
+    grid-area: header;
+    box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.3);
+}
+//
+section h2 {
+    margin: 5px 0;
+}
+
+//query-profile section
+section.query-profile {
+    @include grid();
+    align-items: center;
+    gap: 40px;
+    grid-template-columns: 1fr auto auto;
+    padding: 10px;
+}
+
+.search-bar {
+    @include flex($align: center);
+    padding: 0 20px;
+    gap: 20px;
+
+    input {
+        flex: 1;
+        border: none;
+        border-radius: 40px;
+        padding: 15px 25px;
+        background-color: $search-bar-bgc;
+    }
+}
+
+.user-profile {
+    @include grid();
+    grid-auto-flow: column;
+    align-items: center;
+    gap: 30px;
+    &-avatar {
+        img {
+            width: 60px;
+            height: 60px;
+            border-radius: 30px;
+        }
+    }
+}
+
+.welcome-action {
+    @include grid();
+    grid-auto-flow: column;
+    align-items: center;
+    .welcome {
+        padding: 25px;
+        @include grid();
+        grid-auto-flow: column;
+        align-items: center;
+        justify-content: start;
+        gap: 30px;
+
+        .greeting-user{
+            h2 {
+                font-size: 0.9rem;
+            }
+            h3 {
+                font-size: 1.3rem;
+            }
+        }
+
+   }
+
+    button {
+        border: none;
+        background-color: $nav-bgc;
+        color: $nav-font-color;
+        border-radius: 30px;
+        padding: 10px 20px;
+    }
+
+    .action {
+        @include grid();
+        grid-auto-flow: column;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+nav {
+    background-color: $nav-bgc;
+    grid-area: nav;
+    padding: 30px 10px;
+
+    @include grid();
+    grid-auto-flow: row;
+    align-content: start;
+    row-gap: 50px;
+
+    h2 {
+        margin: 0;
+        padding-left: 15px;
+        color: $nav-font-color;
+    }
+
+    ul {
+        @include grid();
+        align-items: center;
+        align-content: center;
+        grid-auto-flow: row;
+
+        row-gap: 25px;
+    }
+
+    li {
+        padding-left: 15px;
+    }
+
+
+    a {
+        color: $nav-font-color;
+    }
+
+    a:hover {
+        color: invert($nav-font-color);
+    }
+
+    ul.settings {
+        margin-top: 25px;
+    }
+}
+
+//Main area
+main {
+    grid-area: main;
+
+    @include grid($column: 3fr 1fr);
+    grid-auto-rows: minmax(250px, auto);
+    grid-template-areas: 
+        "user-project announcement"
+        "user-project trending-user"
+    ;
+    gap: 15px;
+}
+
+main {
+    background-color: #f1f5f9;
+    padding: 17px;
+}
+
+.user-project {
+    grid-area: user-project;
+}
+
+.user-project-list {
+    @include grid($column: 1fr 1fr);
+    gap: 17px;
+    .user-project-item {
+        background-color: white;
+        padding: 25px;
+        border-radius: 7px;
+        border-left: 7px solid #f97316;
+
+        @include grid();
+        grid-auto-flow: row;
+
+        &-action {
+            justify-self: end;
+            @include grid();
+            font-size: 1.2rem;
+            grid-auto-flow: column;
+            gap: 15px;
+            padding-right: 10px;
+
+            i:hover {
+                color: #f97316;
+            }
+        }
+    }
+
+}
+
+.announcement {
+    grid-area: announcement;
+}
+
+.announcement-list {
+    border-radius: 10px;
+    background-color: white;
+    padding: 35px;
+    @include grid();
+    gap: 20px;
+    grid-auto-flow: row;
+    a {
+        color: black;
+    }
+    li {
+        border-bottom: 1px solid #d4d4d4;
+    }
+}
+
+.trending-user{
+    grid-area: trending-user;
+
+   &-list{
+        @include grid();
+        grid-auto-flow: row;
+        gap: 15px;
+        justify-content: center;
+        background-color: white;
+        border-radius: 10px;
+        padding: 25px;
+
+        a {
+            color: black;
+        }
+    }
+
+    &-item {
+        @include grid();
+        grid-auto-flow: column;
+        justify-content: start;
+        gap: 30px;
+    }
+}
